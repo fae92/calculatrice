@@ -16,9 +16,12 @@ public class ServiceCalculatrice {
 	 */
 	public long additionner(long val1, long val2) {
 
-		Calculatrice calculatrice = creerCalculatrice();
-		long retour = calculatrice.add(val1, val2);
-		return retour;
+		//create calculatrice
+		//make calculation
+		//return result
+		
+		//delete this fake return
+		return 0;
 	}
 	
 	/**
@@ -30,9 +33,12 @@ public class ServiceCalculatrice {
 	 */
 	public long soustraire(long val1, long val2) {
 
-		Calculatrice calculatrice = creerCalculatrice();
-		long retour = calculatrice.substract(val1, val2);
-		return retour;
+		//create calculatrice
+		//make calculation
+		//return result
+		
+		//delete this fake return
+		return 0;
 	}	
 	
 	/**
@@ -45,9 +51,12 @@ public class ServiceCalculatrice {
 	 */
 	public long multiplier(long val1, long val2) {
 
-		Calculatrice calculatrice = creerCalculatrice();
-		long retour = calculatrice.multiply(val1, val2);
-		return retour;
+		//create calculatrice
+		//make calculation
+		//return result
+		
+		//delete this fake return
+		return 0;
 	}	
 	
 
@@ -61,9 +70,12 @@ public class ServiceCalculatrice {
 	 */
 	public long diviser(long val1, long val2) {
 
-		Calculatrice calculatrice = creerCalculatrice();
-		long retour = calculatrice.divide(val1, val2);
-		return retour;
+		//create calculatrice
+		//make calculation
+		//return result
+		
+		//delete this fake return
+		return 0;
 	}	
 	
 	/**
@@ -76,12 +88,14 @@ public class ServiceCalculatrice {
 	 * @return the obtained result
 	 */
 	public long calculer(long val1, long val2, long val3) {
-		Calculatrice calculatrice = creerCalculatrice();
 
-		long somme = calculatrice.add(val1, val2);
-		long retour = calculatrice.substract(somme, val3);
-
-		return retour;
+		//create calculatrice
+		//make calculation add
+		//make calculation substract on the temporary result
+		//return result
+		
+		//delete this fake return
+		return 0;
 	}
 
 }
