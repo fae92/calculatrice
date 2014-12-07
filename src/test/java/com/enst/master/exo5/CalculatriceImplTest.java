@@ -56,7 +56,11 @@ public class CalculatriceImplTest {
 	
 	@Test
 	public void testDivide() {
+
+		// execute the method
 		long result = calculatrice.divide(2, 2);
+		
+		//assert that the result is good
 		Assert.assertEquals(1, result);
 	}	
 	
