@@ -1,11 +1,24 @@
-package com.enst.master.exo5;
+package com.enst.master.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-public class ServiceCalculatrice {
-
-	protected Calculatrice creerCalculatrice() {
-		return new CalculatriceImpl();
+@Service
+public class CalculatriceServiceImpl {
+	
+	@Autowired
+	private Calculatrice cal;
+	
+	public Calculatrice getCal(){
+		return this.cal ;
 	}
+	
+	
+	public void setCal(Calculatrice newCal){
+		this.cal  = newCal;
+	}
+	
+	
 
 	/**
 	 * Calculate sum of the long parameters
@@ -19,9 +32,10 @@ public class ServiceCalculatrice {
 		//create calculatrice
 		//make calculation
 		//return result
+		return this.getCal().add(val1, val2);
 		
 		//delete this fake return
-		return 0;
+		
 	}
 	
 	/**
@@ -38,7 +52,7 @@ public class ServiceCalculatrice {
 		//return result
 		
 		//delete this fake return
-		return 0;
+		return this.getCal().substract(val1, val2);
 	}	
 	
 	/**
@@ -56,7 +70,7 @@ public class ServiceCalculatrice {
 		//return result
 		
 		//delete this fake return
-		return 0;
+		return this.getCal().multiply(val1, val2);
 	}	
 	
 
@@ -75,7 +89,7 @@ public class ServiceCalculatrice {
 		//return result
 		
 		//delete this fake return
-		return 0;
+		return this.getCal().divide(val1, val2);
 	}	
 	
 	/**
@@ -90,12 +104,15 @@ public class ServiceCalculatrice {
 	public long calculer(long val1, long val2, long val3) {
 
 		//create calculatrice
+		CalculatriceImpl cal = (CalculatriceImpl) this.getCal();
 		//make calculation add
+		long tmp = cal.add(val1, val2);
 		//make calculation substract on the temporary result
+		long result = cal.substract(val3, tmp);
 		//return result
 		
 		//delete this fake return
-		return 0;
+		return result;
 	}
 
 }

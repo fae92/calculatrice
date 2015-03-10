@@ -1,4 +1,4 @@
-package com.enst.master.exo5;
+package com.enst.master.service;
 
 public interface Calculatrice {
 

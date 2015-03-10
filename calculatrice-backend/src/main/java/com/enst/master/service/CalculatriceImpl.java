@@ -1,5 +1,9 @@
-package com.enst.master.exo5;
+package com.enst.master.service;
 
+import org.springframework.stereotype.Component;
+
+
+@Component
 public class CalculatriceImpl implements Calculatrice {
 
 	public static final String ERR_ARG_CANNOT_BE_NEGATIVE = "Arguments cannot be negative";
@@ -13,7 +17,13 @@ public class CalculatriceImpl implements Calculatrice {
 	public long add(long val1, long val2) {
 		// if val1 < 0 or val2 < 0 throw new IllegalArgumentException(ERR_ARG_CANNOT_BE_NEGATIVE);
 		//TODO code return
-		return 0;
+		if ( val1<0 || val2<0 ) {
+			throw new IllegalArgumentException(ERR_ARG_CANNOT_BE_NEGATIVE);
+		} else {
+			return val1+val2;
+			// TODO: handle exception
+		}
+		
 	}
 
 	/*
@@ -21,26 +31,30 @@ public class CalculatriceImpl implements Calculatrice {
 	 * @see com.enst.master.exo3.Calculatrice#substract(long, long)
 	 */
 	public long substract(long val1, long val2) {
-		return 0;
+		return val1-val2;
 	}
 
 	
 	/*
 	 * (non-Javadoc)
-	 * @see com.enst.master.exo5.Calculatrice#multiply(long, long)
+	 * @see com.enst.master.service.Calculatrice#multiply(long, long)
 	 */
 	public long multiply(long val1, long val2) {
-		return 0;
+		return val1*val2;
 	}
 
 	/*
 	 * (non-Javadoc)
-	 * @see com.enst.master.exo5.Calculatrice#divide(long, long)
+	 * @see com.enst.master.service.Calculatrice#divide(long, long)
 	 */
 	public long divide(long val1, long val2) {
 		// if val2 is == 0 throw new IllegalArgumentException(ERR_ARG_CANNOT_BE_NULL);
+		if (val2 != 0){
+			return val1/val2;
+		} else {
+			throw new IllegalArgumentException(ERR_ARG_CANNOT_BE_NULL);
+		}
 		
-		return 0;
 	}
 
 	
